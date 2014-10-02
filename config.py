@@ -13,7 +13,7 @@ minse = [[],[],[]]
 maxse = [[],[],[]]
 p = 0
 try:
-	mins, maxs= pickle.load(open("varvid.p", "rb"))
+	mins, maxs= pickle.load(open("colors.p", "rb"))
 except:
 	mins = np.array([[255,255,255],[255,255,255],[255,255,255]])
 	maxs = np.array([[0,0,0],[0,0,0],[0,0,0]])
@@ -77,7 +77,7 @@ while(True):
 	elif k == ord('b'):
 		p = 2
 	elif k == ord('s'):
-		pickle.dump([mins,maxs], open("varvid.p", "wb"))
+		pickle.dump([mins,maxs], open("colors.p", "wb"))
 	elif k == ord('e'):
 			eelmised_varvid()
 # When everything done, release the capture
